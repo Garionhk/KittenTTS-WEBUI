@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KittenTTS GUI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+    
+    <div class="container">
+        <header>
+            <h1>KittenTTS</h1>
+            <p>High-quality text-to-speech</p>
+        </header>
+        
+        <main class="glass-panel">
+            <div class="input-group">
+                <label for="text-input">Your Message</label>
+                <textarea id="text-input" placeholder="Type something beautiful..." rows="4"></textarea>
+            </div>
+            
+            <div class="controls">
+                <div class="input-group">
+                    <label for="voice-select">Voice</label>
+                    <select id="voice-select">
+                        <!-- Voices will be populated by JS -->
+                    </select>
+                </div>
+                
+                <button id="generate-btn">
+                    <span class="btn-text">Generate Audio</span>
+                    <div class="loader" id="loader"></div>
+                </button>
+            </div>
+            
+            <div id="status-message" class="status-hidden">
+                <p>Saved: <span id="saved-filename"></span></p>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Files are automatically saved to the <code>output</code> folder</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
